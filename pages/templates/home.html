@@ -2,4 +2,9 @@
 
 {% block content %}
 <h1>HOME PAGE</h1>
+<ul>
+  {% for content in object_list %}
+    <li>{{ content }}</li>
+  {% endfor %}
+</ul>
 {% endblock %}
