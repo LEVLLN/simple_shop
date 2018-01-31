@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>BLOG</h1>
+
+  {% for content in object_list %}
+  <div class="card">
+  	<div class="card-header">
+  		<span class="card-title">{{ content.title }}</span>
+  	</div>
+  	<div class="card-content">
+    	<p>{{ content.description }} </p>
+    	<small>{{ content.author}}</small>
+    </div>
+    <div class="card-footer">
+    	<a class="btn" href="{% url 'content_detail' content.pk %}">MORE</a>
+	</div>
+  </div>
+  {% endfor %}
+
+{% endblock content%}
