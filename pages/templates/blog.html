@@ -10,7 +10,8 @@
   	</div>
   	<div class="card-content">
     	<p>{{ content.description }} </p>
-    	<small>{{ content.author}}</small>
+    	<small>{{ content.created_at}}</small>
+      <small>{{ content.updated_at}}</small>
     </div>
     <div class="card-footer">
     	<a class="btn" href="{% url 'content_detail' content.pk %}">MORE</a>
