@@ -1,5 +1,6 @@
 from django.db import models
 import datetime
+from django.urls import reverse
 
 # Create your models here.
 class Content(models.Model):
@@ -12,6 +13,10 @@ class Content(models.Model):
     	)
     title = models.TextField()
     description = models.CharField(max_length=255)
+
     def __str__(self):
         """A string representation of the model."""
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('home')

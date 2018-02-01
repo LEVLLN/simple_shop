@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>BLOG</h1>
-
+  <a href="{% url 'blog_new'%}">Add Blog</a>
   {% for content in object_list %}
   <div class="card">
   	<div class="card-header">
