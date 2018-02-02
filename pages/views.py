@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from .models import Content
 
 # Create your views here.
@@ -23,3 +23,8 @@ class BlogCreateView(CreateView):
 	template_name = 'blog_new.html'
 	model = Content
 	fields = '__all__'
+
+class BlogUpdateView(UpdateView):
+    model = Content
+    fields = ['title', 'text', 'description']
+    template_name = 'blog_edit.html'

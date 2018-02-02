@@ -5,6 +5,7 @@
     <h2>{{ content.title }}</h2>
     <p>{{ content.text }}</p>
     <small>{{ content.author }}</small>
+    <a href="{% url 'blog_edit' content.pk %}">+ Edit Blog Post</a>
   </div>
 
 {% endblock content %}

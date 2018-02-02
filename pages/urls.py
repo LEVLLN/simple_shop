@@ -8,4 +8,6 @@ urlpatterns = [
 	path('blog/',views.BlogPageView.as_view(),name="blog"),
 	path('blog/<int:pk>/', views.BlogDetailView.as_view(), name='content_detail'),
 	path('blog/new/', views.BlogCreateView.as_view(), name='blog_new'),
+	path('blog/<int:pk>/edit/',
+        views.BlogUpdateView.as_view(), name='blog_edit'),
 ]
